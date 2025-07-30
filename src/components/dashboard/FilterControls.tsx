@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Search, Filter, X } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Search, X } from 'lucide-react';
 
 interface FilterState {
   campaign: string;
@@ -15,6 +16,26 @@ interface FilterControlsProps {
   onFilter: (filters: FilterState) => void;
   onClear: () => void;
 }
+
+// Available filter options based on mock data
+const channelOptions = [
+  'Google Ads',
+  'Facebook Ads', 
+  'Instagram',
+  'YouTube',
+  'LinkedIn'
+];
+
+const cityOptions = [
+  'Mumbai',
+  'Delhi',
+  'Bangalore',
+  'Chennai',
+  'Hyderabad',
+  'Pune',
+  'Kolkata',
+  'Ahmedabad'
+];
 
 export default function FilterControls({ onFilter, onClear }: FilterControlsProps) {
   const [filters, setFilters] = useState<FilterState>({
@@ -40,7 +61,7 @@ export default function FilterControls({ onFilter, onClear }: FilterControlsProp
   return (
     <div className="flex flex-col sm:flex-row gap-3 mb-4">
       <div className="relative flex-1">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4 z-10" />
         <Input
           placeholder="Search campaigns..."
           value={filters.campaign}
@@ -49,24 +70,42 @@ export default function FilterControls({ onFilter, onClear }: FilterControlsProp
         />
       </div>
       
-      <div className="relative flex-1">
-        <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-        <Input
-          placeholder="Filter by channel..."
+      <div className="flex-1">
+        <Select
           value={filters.channel}
-          onChange={(e) => handleFilterChange('channel', e.target.value)}
-          className="pl-10"
-        />
+          onValueChange={(value) => handleFilterChange('channel', value)}
+        >
+          <SelectTrigger className="w-full bg-background border-border">
+            <SelectValue placeholder="Filter by channel..." />
+          </SelectTrigger>
+          <SelectContent className="bg-background border-border z-50">
+            <SelectItem value="" className="text-muted-foreground">All Channels</SelectItem>
+            {channelOptions.map((channel) => (
+              <SelectItem key={channel} value={channel} className="text-foreground">
+                {channel}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
       
-      <div className="relative flex-1">
-        <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-        <Input
-          placeholder="Filter by city..."
+      <div className="flex-1">
+        <Select
           value={filters.city}
-          onChange={(e) => handleFilterChange('city', e.target.value)}
-          className="pl-10"
-        />
+          onValueChange={(value) => handleFilterChange('city', value)}
+        >
+          <SelectTrigger className="w-full bg-background border-border">
+            <SelectValue placeholder="Filter by city..." />
+          </SelectTrigger>
+          <SelectContent className="bg-background border-border z-50">
+            <SelectItem value="" className="text-muted-foreground">All Cities</SelectItem>
+            {cityOptions.map((city) => (
+              <SelectItem key={city} value={city} className="text-foreground">
+                {city}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
       
       {hasActiveFilters && (
