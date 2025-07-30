@@ -1,73 +1,108 @@
-# Welcome to your Lovable project
+# ADmyBRAND Insights Dashboard - Bharat Edition 🇮🇳
 
-## Project info
+[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge&logo=vercel)](https://admybrand-insights-bharat-33.vercel.app/)
+[![GitHub](https://img.shields.io/badge/repo-GitHub-black?style=for-the-badge&logo=github)](https://github.com/vaibhavv-2003/admybrand-insights-bharat-33.git)
 
-**URL**: https://lovable.dev/projects/2fe0be0d-6e64-4e7f-a682-0adc5335e1dc
+A modern analytics dashboard for Indian digital marketing agencies, built with Next.js and AI assistance.
 
-## How can I edit this code?
+![Dashboard Screenshot](public/screenshot.png)
 
-There are several ways of editing your application.
+## ✨ Key Features
 
-**Use Lovable**
+- **India-Focused Analytics**
+  - ₹ INR currency formatting
+  - Regional data (Mumbai, Delhi, Bangalore etc.)
+  - Festival-themed campaigns (Diwali, Holi)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2fe0be0d-6e64-4e7f-a682-0adc5335e1dc) and start prompting.
+- **Interactive Visualizations**
+  - Revenue trends (Line chart)
+  - Channel split (Donut chart)
+  - City performance (Bar chart)
+  - Campaign data table with filters
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Professional UI/UX**
+  - Dark/light mode toggle
+  - Glassmorphism design elements
+  - Micro-interactions & animations
 
-**Use your preferred IDE**
+- **Data Management**
+  - CSV/PDF export functionality
+  - Sorting & pagination
+  - Responsive layout
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠 Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Visualization**: Recharts
+- **Animations**: Framer Motion
+- **Formatting**: react-intl
+- **Deployment**: Vercel
 
-Follow these steps:
+## 🚀 Live Demo
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Access the deployed version:  
+👉 [admybrand-insights-bharat-33.vercel.app](https://admybrand-insights-bharat-33.vercel.app/)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🏗️ Development Setup
 
-# Step 3: Install the necessary dependencies.
-npm i
+1. Clone repository:
+   ```bash
+   git clone https://github.com/vaibhavv-2003/admybrand-insights-bharat-33.git
+   cd admybrand-insights-bharat-33
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+2.Install dependencies:
+npm install
+
+3.Run development server:
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+📝 AI Usage Report
+This project was developed with AI assistance for rapid prototyping:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Key AI Contributions:
 
-**Use GitHub Codespaces**
+Component Generation:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+"Create responsive metric cards with Indian rupee formatting"
 
-## What technologies are used for this project?
+"Generate animated donut chart with centered total display"
 
-This project is built with:
+Code Optimization:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+"Implement theme toggle with next-themes"
 
-## How can I deploy this project?
+"Fix CSV export with Indian number formatting"
 
-Simply open [Lovable](https://lovable.dev/projects/2fe0be0d-6e64-4e7f-a682-0adc5335e1dc) and click on Share -> Publish.
+Design Implementation:
 
-## Can I connect a custom domain to my Lovable project?
+"Create glassmorphism UI cards"
 
-Yes, you can!
+"Add micro-interactions to data table"
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Bug Fixes:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+"Resolve theme inconsistency across components"
+
+"Fix text visibility in light mode"
+
+AI Tools Used:
+
+ChatGPT-4 for architecture design
+
+GitHub Copilot for code suggestions
+
+Claude for documentation assistance
+
+📊 Evaluation Criteria Coverage
+Criteria	Implementation Details
+Beautiful UI	Glassmorphism design, animations, Indian color palette
+AI Usage	Comprehensive AI-assisted development log
+Code Quality	TypeScript, reusable components, proper documentation
+Functionality	All core features implemented with polish
+Documentation	Detailed README with setup instructions
+📬 Submission
+Repository: github.com/vaibhavv-2003/admybrand-insights-bharat-33
+Live Demo: admybrand-insights-bharat-33.vercel.app
+
+Developed by Vaibhav as part of the ADmyBRAND hiring process:
