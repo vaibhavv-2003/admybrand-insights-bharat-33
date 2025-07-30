@@ -1,0 +1,60 @@
+# AI Usage Report - ADmyBRAND Insights Dashboard
+
+## 📌 Overview
+This project leveraged AI tools extensively for rapid prototyping, problem-solving, and design inspiration. Below is a detailed breakdown of AI contributions.
+
+## 🛠️ Tools Used
+| Tool | Purpose | Usage Frequency |
+|------|---------|-----------------|
+| Lovable AI | Core dashboard development | 60% of components |
+| Figma AI | UI/UX design assistance | 20% of design process | 
+| Dribbble AI | Design inspiration | 15% of initial concepts |
+| DeepSeek Chat | Prompt engineering & debugging | 5% (critical fixes) |
+
+## 🔑 Key AI Contributions
+
+### 1. Lovable AI Implementation
+**Core Features Developed:**
+- Generated 80% of React components including:
+  - Metric cards with Indian rupee formatting
+  - Interactive Recharts implementations
+  - Theme-toggle functionality
+
+**Sample Prompts Used:**
+
+"Create a responsive metric card component in Next.js showing ₹ values with percentage change indicators using Tailwind CSS"
+
+
+### 2. Figma AI Assistance
+- Generated initial wireframes and style guides
+- Suggested color palettes for Indian market appeal
+- Provided spacing and layout recommendations
+
+### 3. Dribbble AI Inspiration
+- Suggested modern dashboard layouts
+- Provided animation concepts for data visualization
+- Recommended UI patterns for analytics interfaces
+
+### 4. DeepSeek Chat Optimization
+**Critical Fixes Assisted:**
+1. Theme consistency across components:
+```tsx
+// Fixed theme provider implementation
+<ThemeProvider attribute="class" defaultTheme="system">
+
+2.Data export functionality debugging:
+
+// Fixed CSV formatting for Indian numbers
+const formatINR = (value) => new Intl.NumberFormat('en-IN').format(value);
+
+📊 AI vs Manual Work Breakdown
+Aspect	      AI-Generated	    Manually Coded
+Components	    60%          	      40%
+Styling	        70%	                30%
+Business Logic  30%	                70%
+Bug Fixes	      45%	                55%
+
+📝 Submission Links
+Full Report: AI_USAGE_REPORT.md
+
+Relevant Code: components/
