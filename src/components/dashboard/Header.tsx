@@ -27,8 +27,12 @@ export default function Header({ title, withModeToggle = true }: HeaderProps) {
             className="flex items-center space-x-3"
             whileHover={{ scale: 1.02 }}
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-saffron to-lotus rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">AB</span>
+            <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
+              <img 
+                src="/lovable-uploads/4acc89df-f5f3-4576-b9a5-2fb9d6b5a9ae.png" 
+                alt="ADmyBRAND Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold text-white">{title}</h1>
