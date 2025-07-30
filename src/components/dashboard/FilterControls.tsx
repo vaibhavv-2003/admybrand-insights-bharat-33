@@ -40,8 +40,8 @@ const cityOptions = [
 export default function FilterControls({ onFilter, onClear }: FilterControlsProps) {
   const [filters, setFilters] = useState<FilterState>({
     campaign: '',
-    channel: '',
-    city: ''
+    channel: 'all',
+    city: 'all'
   });
 
   const handleFilterChange = (key: keyof FilterState, value: string) => {
@@ -51,7 +51,7 @@ export default function FilterControls({ onFilter, onClear }: FilterControlsProp
   };
 
   const handleClear = () => {
-    const emptyFilters = { campaign: '', channel: '', city: '' };
+    const emptyFilters = { campaign: '', channel: 'all', city: 'all' };
     setFilters(emptyFilters);
     onClear();
   };
@@ -79,7 +79,7 @@ export default function FilterControls({ onFilter, onClear }: FilterControlsProp
             <SelectValue placeholder="Filter by channel..." />
           </SelectTrigger>
           <SelectContent className="bg-background border-border z-50">
-            <SelectItem value="" className="text-muted-foreground">All Channels</SelectItem>
+            <SelectItem value="all" className="text-muted-foreground">All Channels</SelectItem>
             {channelOptions.map((channel) => (
               <SelectItem key={channel} value={channel} className="text-foreground">
                 {channel}
@@ -98,7 +98,7 @@ export default function FilterControls({ onFilter, onClear }: FilterControlsProp
             <SelectValue placeholder="Filter by city..." />
           </SelectTrigger>
           <SelectContent className="bg-background border-border z-50">
-            <SelectItem value="" className="text-muted-foreground">All Cities</SelectItem>
+            <SelectItem value="all" className="text-muted-foreground">All Cities</SelectItem>
             {cityOptions.map((city) => (
               <SelectItem key={city} value={city} className="text-foreground">
                 {city}

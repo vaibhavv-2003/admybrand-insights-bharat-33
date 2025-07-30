@@ -26,8 +26,8 @@ export default function DataTable({ data }: DataTableProps) {
   const handleFilter = (filters: { campaign: string; channel: string; city: string }) => {
     const filtered = data.filter(item =>
       item.campaign.toLowerCase().includes(filters.campaign.toLowerCase()) &&
-      item.channel.toLowerCase().includes(filters.channel.toLowerCase()) &&
-      item.city.toLowerCase().includes(filters.city.toLowerCase())
+      (filters.channel === 'all' || item.channel.toLowerCase().includes(filters.channel.toLowerCase())) &&
+      (filters.city === 'all' || item.city.toLowerCase().includes(filters.city.toLowerCase()))
     );
     setFilteredData(filtered);
     setCurrentPage(1);
